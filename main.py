@@ -9,3 +9,7 @@ imie = ''
 cursor.execute("SELECT name FROM test LIMIT 1")
 
 print(cursor.execute)
+print('eny')
+def szs():
+    print('gg')
+print('gg') 
