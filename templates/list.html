@@ -6,7 +6,9 @@
   <body>
     <h1>h1</h1>
     {% for message in get_flashed_messages() %}
-<strong class="success">{{ message }}</strong>{% endfor %}
+    <br>
+<strong class="success">{{ message }}</strong><br>{% endfor %}
+
 <p><a href="{{ url_for('home') }}">Główna</p>
 
   </body>

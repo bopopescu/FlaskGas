@@ -22,10 +22,6 @@ def dblog():
         database='db')
 
 
-# cursor = mariadb_connection.cursor()
-# cursor.execute('INSERT INTO jeden (value, date, time) VALUES (%s, %s, %s)', (value,date,time))
-# mariadb_connection.commit()
-
 @app.route('/home', methods=['GET', 'POST'])
 def home():
 
@@ -71,8 +67,11 @@ def dbList():
     dblog()
     cursor = mariadb_connection.cursor()
     cursor.execute("SELECT * FROM jeden ORDER BY value DESC LIMIT 10")
-    dbResultlist = cursor.fetchone()
-    flash(dbResultlist)
+    dbResultlist = cursor.fetchall()
+    i=0
+    while i <len(dbResultlist):
+        flash(dbResultlist[i][2]+'-->'+dbResultlist[i][1])
+        i+=1
     return render_template('list.html')
 
 if __name__ == '__main__':
