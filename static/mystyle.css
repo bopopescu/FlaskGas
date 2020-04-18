@@ -61,7 +61,7 @@ input[type=text] {
     border: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-input[type=submit] {
+button[type=submit] {
     padding: 15px 25px;
     border: 1px solid rgba(0,0,0,0);
     border-radius: 10px;
@@ -71,7 +71,7 @@ input[type=submit] {
     cursor: pointer;
     box-shadow: 0 0 .5rem rgba(0, 0, 0, .075);
 }
-input[type=submit]:hover {
+button[type=submit]:hover {
     border: 1px solid rgba(0, 0, 0, 0.075);
     color: rgba(0, 0, 0, 0.9);
     box-shadow: 0 0 .5rem rgba(0, 0, 0, .1);

@@ -17,8 +17,9 @@ def dblog():
     global cursor
     global mariadb_connection
     mariadb_connection = mariadb.connect(
+        host= 'localhost',
         user='root',
-        password='piotr',
+        password='passw',
         database='db')
 
 
@@ -71,8 +72,6 @@ def dbList():
     i=0
     while i <len(dbResultlist):
         flash(dbResultlist[i][2]+'-->'+dbResultlist[i][1])
+        flash('-')
         i+=1
     return render_template('list.html')
-
-if __name__ == '__main__':
-    app.run(debug=True)
